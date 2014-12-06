@@ -1,0 +1,10 @@
+{
+    "name": "Chat Apps Server",
+    "version": "0.0.1",
+    "description": "Server for angular mobile",
+    "author" : "Agung Julisman (agung.julisman@yahoo.com)",
+    "dependencies": {
+        "socket.io": "1.0.4",
+        "mongojs": "0.13.1"
+    }
+}

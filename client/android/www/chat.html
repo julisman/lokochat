@@ -1,0 +1,89 @@
+<style>
+    #conversation {
+        font-size: 18px;
+        margin: 0px;
+        height: 250px;
+        overflow: scroll;
+    }
+    .chat
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .chat li
+    {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px dotted #B3A9A9;
+    }
+
+    .chat li.left .chat-body
+    {
+        margin-left: 60px;
+    }
+
+    .chat li.right .chat-body
+    {
+        margin-right: 60px;
+    }
+
+
+    .chat li .chat-body p
+    {
+        margin: 0;
+        color: #777777;
+    }
+
+</style>
+<div content-for="title">
+    <span> {{ tmpnama }}</span>
+</div>
+<div class="scrollable">
+  <div class="scrollable-content">
+
+    <div class="list-group">
+      <div class="list-group-item">
+         <div class="row">
+             <div class="col-md-6">
+                 <div id="conversation">
+                     <div id="messages" class="scrollbar col-md-6">
+                         <ul ng-repeat="(k,v) in messageshistory " class="chat" data-ng-show="k == tmpuserid">
+                                 <li ng-repeat="(a,b) in v ">
+                                     <span ng-class="(b.from == tmpuserid) ? 'chat-img pull-right':'chat-img pull-left'">
+                                         <img src="./img/avatar.png" alt="User Avatar" class="img-circle">
+                                     </span>
+                                     <div class="col-md-10 chat-body clearfix" >
+                                             <div class="header">
+                                                 <small data-ng-if="b.from == tmpuserid" class="text-muted">
+                                                     <span  class="glyphicon glyphicon-time"></span> {{ b.time }}
+                                                 </small>
+                                                 <strong ng-class="(b.from == tmpuserid) ? 'pull-right primary-font':'primary-font'" >{{b.fromname}}</strong>
+                                                 <small data-ng-if="b.from != tmpuserid" class="pull-right text-muted">
+                                                      <span  class="glyphicon glyphicon-time"></span>{{ b.time }}
+                                                 </small>
+                                             </div>
+                                             <p>{{ b.message }}</p>
+                                        </div>
+                                 </li>
+                         </ul>
+                     </div>
+                 </div>
+
+                 <form  class="form-inline">
+                     <div class="panel-footer">
+                         <div class="input-group">
+                             <input type="text" class="form-control input-lg"ng-model="tmp.sendmessage" placeholder="Pesan Anda" id="msg">
+                       <span class="input-group-btn">
+                          <input type="submit" data-ng-click="sendMessage()" name="send" id="send" value="Send" class="btn btn-success btn-lg">
+                       </span>
+                         </div>
+                     </div>
+                 </form>
+             </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>

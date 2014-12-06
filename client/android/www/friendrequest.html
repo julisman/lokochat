@@ -1,0 +1,14 @@
+<div content-for="title">
+    <span> Friend Request</span>
+</div>
+<input type="search" class="form-control app-search" placeholder="Search.." data-ng-model="search" />
+
+<div class="scrollable">
+  <div class="scrollable-content">
+    <div class="list-group">
+      <div ng-repeat="friend in datauser['data']['friendrequest'] | filter : {nama : search}" href="#" data-ng-click="acceptedFn(friend.userid,friend.nama)" class="list-group-item">
+        {{ friend.nama }} <i class="fa fa-chevron-right pull-right"></i>
+      </div>
+    </div>
+  </div>
+</div>

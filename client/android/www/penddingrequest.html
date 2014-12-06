@@ -1,0 +1,13 @@
+<div content-for="title">
+    <span> Pendding Request</span>
+</div>
+<input type="search" class="form-control app-search" placeholder="Search.." data-ng-model="search" />
+<div class="scrollable">
+  <div class="scrollable-content">
+    <div class="list-group">
+      <div ng-repeat="friend in datauser['data']['penddingrequest'] | filter : {nama : search}"  class="list-group-item">
+        {{ friend.nama }}
+      </div>
+    </div>
+  </div>
+</div>

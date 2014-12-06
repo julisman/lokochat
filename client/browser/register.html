@@ -1,0 +1,33 @@
+<div content-for="title">
+    <span>Register</span>
+</div>
+<div class="scrollable">
+  <div class="scrollable-content">
+
+    <div class="list-group">
+      <div class="list-group-item">
+          <form class="form-inline" role="form">
+              <div class="form-group">
+                  <label class="sr-only" for="exampleInputEmail2">Nama</label>
+                  <input type="text" class="form-control" data-ng-model="reg.nama" id="exampleInputEmail2" placeholder="Nama">
+              </div>
+              <div class="form-group">
+                  <label class="sr-only" for="email">Email</label>
+                  <input type="text" class="form-control" data-ng-model="reg.email" id="email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                  <label class="sr-only" for="password">Password</label>
+                  <input type="password" class="form-control" data-ng-model="reg.password" id="password" placeholder="Password">
+              </div>
+              <div class="form-group">
+                  <label class="sr-only" for="confmpassword">Confm Password</label>
+                  <input type="password" class="form-control" data-ng-model="cek.confmpassword" id="confmpassword" placeholder="Confm Password">
+              </div>
+              <button type="submit" class="btn btn-default" data-ng-click="registerFn()">Register</button>
+              <button type="submit" class="btn btn-default" data-ng-click="cancelregisterFn()">Cancel</button>
+
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
