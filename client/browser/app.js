@@ -20,7 +20,7 @@
 
     app.controller('MainController', function($rootScope, $scope,localStorageService,$location ){
       //set server socketio
-      var socket = io.connect('http://localhost:2000');
+      var socket = io.connect('http://93.188.163.202:2000');
 
       // set momeng lang
       // gunakan bahasa indonesia
