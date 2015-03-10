@@ -19,11 +19,11 @@ app.config(function($routeProvider, $locationProvider) {
 
 
 app.controller('MainController', function($rootScope, $scope,localStorageService,$location ){
-      //set server socketio
-      var socket = io.connect('http://192.168.170.1:2000');
+    //set server socketio
+    var socket = io.connect('http://93.188.163.202:2000');
 
     // set momeng lang
-      // gunakan bahasa indonesia
+    // gunakan bahasa indonesia
     moment.lang('id');
     //set plugin notification
     window.plugin.notification.local.setDefaults({ autoCancel: true });
