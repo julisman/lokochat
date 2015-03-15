@@ -263,9 +263,10 @@
       });
 
       //animasi loading ketika pindah halaman
-      $rootScope.$on("$routeChangeStart", function(){
-        $scope.cekLocalStorage();
-        $rootScope.loading = true;
+      $rootScope.$on("$routeChangeStart", function(event,current){
+          if(current.$$route.originalPath == '/') $location.path('/home');
+          $scope.cekLocalStorage();
+          $rootScope.loading = true;
       });
 
       $rootScope.$on("$routeChangeSuccess", function(){
