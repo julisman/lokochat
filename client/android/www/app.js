@@ -296,7 +296,7 @@ app.controller('MainController', function($rootScope, $scope,localStorageService
     });
 
     //animasi loading ketika pindah halaman
-    $rootScope.$on("$routeChangeStart", function(){
+    $rootScope.$on("$routeChangeStart", function(event,current){
         if(current.$$route.originalPath == '/') $location.path('/home');
         $scope.cekLocalStorage();
         $rootScope.loading = true;
