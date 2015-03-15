@@ -1,4 +1,5 @@
-lokochat ini adalah sebuah aplikasi instant messenger dari studi kasus buku ke 2 saya
+lokochat  adalah sebuah aplikasi instant messenger dari studi kasus buku ke 2 saya
+
 Bikin Aplikasi ANDROID dengan Angular Mobile dan MongoDB
 
 ke depannya aplikasi ini akan terus dikembangkan dengan berbagai fitur dan tentunya bug fixing.
