@@ -12,6 +12,6 @@ anda bisa klik btn wath dan start pada repository tersebut agar selalu mendapatk
 
 dan jika anda tertarik untuk mengembangkan atau ikut berpartisipasi dalam pengembangan aplikasi ini anda bisa kirim email ke agung.julisman@yahoo.com
 
-terakhir anda bisa mendownload .apk untuk android di https://github.com/julisman/lokochat/blob/master/lokochat.apk atau di http://93.188.163.202/lokochat/lokochat.apk
+terakhir anda bisa mendownload .apk untuk android di http://93.188.163.202/lokochat/lokochat.apk
 
 Feel free to add me on lokochat agung.julisman@yahoo.com
