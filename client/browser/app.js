@@ -57,12 +57,13 @@
 
       //cek localstorage
       $scope.cekLocalStorage = function(){
-          if(localStorageService.get('user')){
+          if($scope.datauser){
               $location.path('/home');
               $scope.islogin = true;
           }else{
               $location.path('/');
               $scope.islogin = false;
+              localStorageService.remove('user');
           }
       };
       $scope.cekLocalStorage();
@@ -264,6 +265,7 @@
 
       //animasi loading ketika pindah halaman
       $rootScope.$on("$routeChangeStart", function(){
+        $scope.cekLocalStorage();
         $rootScope.loading = true;
       });
 
