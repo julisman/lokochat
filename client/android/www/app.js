@@ -66,7 +66,6 @@ app.controller('MainController', function($rootScope, $scope,localStorageService
     //cek localstorage
     $scope.cekLocalStorage = function(){
         if($scope.datauser){
-            $location.path('/home');
             $scope.islogin = true;
         }else{
             $location.path('/');
