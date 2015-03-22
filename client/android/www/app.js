@@ -64,16 +64,12 @@ app.controller('MainController', function($rootScope, $scope,localStorageService
     };
 
     //cek localstorage
-    $scope.cekLocalStorage = function(){
-        if($scope.datauser){
-            $scope.islogin = true;
-        }else{
+    ($scope.cekLocalStorage = function(){
+        if(!$scope.datauser){
             $location.path('/');
-            $scope.islogin = false;
             localStorageService.remove('user');
         }
-    };
-    $scope.cekLocalStorage();
+    })();
 
     //register
     $scope.reg = {};
@@ -298,7 +294,7 @@ app.controller('MainController', function($rootScope, $scope,localStorageService
     //animasi loading ketika pindah halaman
     $rootScope.$on("$routeChangeStart", function(event,current){
         if(current.$$route.originalPath == '/') $location.path('/home');
-        $scope.cekLocalStorage();
+        if(current.$$route.originalPath != '/register')$scope.cekLocalStorage();
         $rootScope.loading = true;
     });
 

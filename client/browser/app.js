@@ -56,16 +56,13 @@
       };
 
       //cek localstorage
-      $scope.cekLocalStorage = function(){
-          if($scope.datauser){
-              $scope.islogin = true;
-          }else{
-              $location.path('/');
-              $scope.islogin = false;
-              localStorageService.remove('user');
-          }
-      };
-      $scope.cekLocalStorage();
+    ($scope.cekLocalStorage = function(){
+        if(!$scope.datauser){
+            $location.path('/');
+            localStorageService.remove('user');
+        }
+    })();
+
 
       //register
       $scope.reg = {};
@@ -74,7 +71,6 @@
       $scope.is_validated = function(){
             var res = true,
                 msg = '';
-
 
             if(typeof $scope.reg['nama'] === 'undefined' || $scope.reg['nama'] == ''){
                 res = false;
@@ -265,7 +261,7 @@
       //animasi loading ketika pindah halaman
       $rootScope.$on("$routeChangeStart", function(event,current){
           if(current.$$route.originalPath == '/') $location.path('/home');
-          $scope.cekLocalStorage();
+          if(current.$$route.originalPath != '/register')$scope.cekLocalStorage();
           $rootScope.loading = true;
       });
 
