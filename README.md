@@ -6,7 +6,7 @@ ke depannya aplikasi ini akan terus dikembangkan dengan berbagai fitur dan tentu
 
 sebagai repository dari source nya saya menggunakan github https://github.com/julisman/lokochat.
 
-anda bisa klik btn wath dan start pada repository tersebut agar selalu mendapatkan update terbaru dari aplikasi ini.
+anda bisa klik btn watch dan start pada repository tersebut agar selalu mendapatkan update terbaru dari aplikasi ini.
 
  menemukan bug ? anda bisa membuat issue di repo tersebut https://github.com/julisman/lokochat/issues
 
